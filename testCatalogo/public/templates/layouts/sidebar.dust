@@ -1,0 +1,78 @@
+<div class="menu">
+					<div class="item-menu">
+						<h1 class="menu-heading">{menu.name}</h1>
+						<ul class="list-linha">
+							{#menu.submenus}
+							<li class="item-sublinha">
+								<a class="mheading-sublinha" {#noFollow} rel="nofollow" {/noFollow} href="{link}">{name}</a>
+							</li>
+							{/menu.submenus}
+						</ul>
+					</div>					
+
+					{?filterGroups}
+					<div class="filterStore">
+						<div class="filter-box">
+							<span class="box-title">Filtros</span>
+							{?selectedFilters}
+							<div class="filter-selected">
+								<ul class="box-content-selected">
+									{#selectedFilters}
+									<li class="it-list  ">
+										<a class="lnk" href="{link}">
+											<span class="i-closed spt-i-closed-checked"></span>
+											<span class="txt-name">{name}</span>
+											<span class="txt-count">({quantity})</span>
+										</a>
+									</li>
+									{/selectedFilters}
+								</ul>
+								<a href="/linha/231993/informatica/notebooks" class="reset-filter">limpar todos os filtros</a>
+							</div>	
+							{/selectedFilters}
+							{#filterGroups}
+							<ul class="box-content">
+								<li class="filter   ">
+									<span class="filter-title">{name}</span>
+									<span class="btn-sh-filter spt-i-plus-check"></span>
+									<div class="filter-scroll">
+										<ul class="lst">
+											{#filters}
+											<li class="it-list">
+												<a class="lnk" href="{link}">
+													<span class="spt-i-custom-check {#selected}checked{/selected}"></span>
+													<span class="txt-name">{name}</span>
+													<span class="txt-count">({quantity})</span>
+												</a>
+											</li>
+											{/filters}
+										</ul>
+									</div>
+								</li>
+							</ul>
+							{/filterGroups}
+						</div>
+					</div>
+					{/filterGroups}
+				</div>
+				{#menuDepto}
+				<div class="menu menu-dpt filterStore">
+					<div class="item-menu">
+						<span class="menu-heading">Mais {name}</span>
+						<span class="btn-sh-filter spt-i-plus-check checked"></span>
+						<div hidden>
+							<ul class="list-linha">
+								{#submenus}
+								{#submenus}
+								{#isStrutural}
+								<li class="item-sublinha">
+									<a class="mheading-sublinha" {#noFollow} rel="nofollow" {/noFollow} href="{link}">{name}</a>
+								</li>
+								{/isStrutural}
+								{/submenus}
+								{/submenus}
+							</ul>
+						</div>
+					</div>
+				</div>
+				{/menuDepto}

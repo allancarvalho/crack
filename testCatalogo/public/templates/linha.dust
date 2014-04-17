@@ -1,0 +1,46 @@
+{>"layouts/master" /}
+{<body}
+<div class="grid-control">
+	<section itemprop="breadcrumb" itemtype="http://schema.org/Breadcrumb">
+		<div class="breadcrumb">
+			<span class="span-bc">
+				{#breadcrumbs}
+				{#selected}
+				<span itemprop="name" class="link selected">{name}</span>
+				{:else}
+				<a itemprop="url" href="{link}" class="link">
+					<span itemprop="name">{name}</span>
+				</a>
+				{/selected}
+
+				{/breadcrumbs}		
+			</span>
+		</div>
+	</section>
+</div>
+<div class="grid-control">
+	<div class="row hasSidebarLeft">
+		<div class="sidebar">
+			{+sidebar}
+				{>"layouts/sidebar" /}
+			{/sidebar}
+		</div>
+		<div class="content">
+			<section class="products-area grid " id="vitrine">
+				{#products}
+				{>"layouts/single_produto" /}
+				{/products}
+			</section>
+			<div class="pagination">
+				<ul class="pure-paginator acrN">
+					{#pagination.pages}
+					<li>
+						<a data-ajaxcallback="paginationCallback" data-ajaxkey="ofertas" data-ajaxbox=".content .paginado" class="pure-button {#selected}pure-button-active{/selected}" href="{link}">{number}</a>
+					</li>
+					{/pagination.pages}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+{/body}

@@ -1,0 +1,28 @@
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://172.20.16.254/acom/catalog/css/catalog.base.min.css" />
+	<script src="http://172.20.16.254/acom/catalog/js/v1/vendor/jquery/jquery.js"></script>
+	<title>
+		{+title}
+			Americanas.com
+		{/title}
+	</title>
+	<script type="text/javascript">
+	$.ajaxSetup({
+		cache: true
+	});
+    var readyEvents = [];
+    var app_loaded = false;
+    function onReady(func) {
+      if (func) readyEvents.push(func);
+      if (app_loaded) {
+        if (readyEvents.length > 0) {
+          for (var f in readyEvents) {
+            readyEvents[f].call(this);
+          }
+          readyEvents = [];
+        }
+      }
+    }
+    </script>
+</head>

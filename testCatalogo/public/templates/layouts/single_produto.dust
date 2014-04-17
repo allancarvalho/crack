@@ -1,0 +1,72 @@
+<article class="single-product vitrine230   ">
+	<form action="http://www.americanas.com.br/produto/garantia/110324153/geladeira-refrigerador-continental-duplex-frost-free-rfct451-403-litros-branco">
+		<input class="productId" name="codProdFusion" type="hidden" value="110324153">
+		<input name="codItemFusion" type="hidden">
+		<div class="productImg">
+			<a href="/produto/{id}/" title="{name}" class="url release">
+				<img width="230" height="230" data-alternative-src="http://iacom.s8.com.br/produtos/01/00/item/110324/1/110324153_1GG.jpg" alt="{name}" src="{mqImage}" class="photo">
+			</a>
+		</div>
+		<div class="productInfo">
+			<div class="top-area-product">
+				<a href="/produto/{id}/" title="{name}" class="prodTitle">
+					{name}
+				</a>
+				<div class="box_bv" itemprop="aggregateRating" itemscope="itemscope" itemtype="http://schema.org/AggregateRating">
+					<span class="review_bv">
+						<div class="review_points" style="width:79.058%">
+							<a href="http://www.americanas.com.br/produto/110324153/geladeira-refrigerador-continental-duplex-frost-free-rfct451-403-litros-branco#opinioes">
+								<img src="http://img.americanas.com.br/statics-1.62.7.2671/catalog/img/estrelas_bazzarinline.png" alt="stars">
+							</a>
+						</div>
+					</span>
+					<span>
+						<span itemprop="reviewCount">
+							(56)
+						</span>
+					</span>
+				</div>
+			</div>
+			<div class="product-info">
+				<div class="price-area">
+					<span class="regular price">
+						<del>
+							de {sales_price} por
+						</del>
+					</span>
+					<span class="sale price">
+						<strong>
+							{invoice_price}
+						</strong>
+					</span>
+					<div class="interest">
+						{#installment}
+						<span class="parcel">
+							{total_installments}x de {installment_value}
+						</span>
+						<span class="condition">
+							sem juros
+						</span>
+						{/installment}
+					</div>
+					<div class="mb-save">
+						Economize 13%
+					</div>
+				</div>
+				{#freight}
+				<div class="freight">
+					<a href="/estaticapop/regras-do-site" data-modal-maxwidth="760" data-modal="true">
+						<img src="{.}">
+					</a>
+				</div>
+				{/freight}
+				<div class="see-more">
+					+
+					<a href="http://www.americanas.com.br/marca/Continental">
+						Continental
+					</a>
+				</div>
+			</div>
+		</div>
+	</form>
+</article>

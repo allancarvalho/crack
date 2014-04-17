@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{>"layouts/head" /}
+</head>
+<body>
+	{header|s}
+	{+body}
+	<div class="grid-control">		
+		padrao
+	</div>
+	{/body}
+	{footer|s}
+	{>"layouts/scripts_footer" /}
+
+</body>
+</html>
