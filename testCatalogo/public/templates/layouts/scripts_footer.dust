@@ -1,5 +1,5 @@
-<script src="http://172.20.16.254/acom/catalog/js/v1/injs.js"></script>
+<script src="http://resources.local/acom/catalog/js/v1/injs.js"></script>
 <script>
-	injs.jsDir = "http://172.20.16.254/acom/catalog/js/v1/";
+	injs.jsDir = "http://resources.local/acom/catalog/js/v1/";
 </script>
-<script src="http://172.20.16.254/acom/catalog/js/v1/main.js"></script>
+<script src="http://resources.local/acom/catalog/js/v1/main.js"></script>

@@ -1,7 +1,7 @@
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="http://172.20.16.254/acom/catalog/css/catalog.base.min.css" />
-	<script src="http://172.20.16.254/acom/catalog/js/v1/vendor/jquery/jquery.js"></script>
+	<link rel="stylesheet" href="http://resources.local/acom/catalog/css/catalog.base.min.css" />
+	<script src="http://resources.local/acom/catalog/js/v1/vendor/jquery/jquery.js"></script>
 	<title>
 		{+title}
 			Americanas.com

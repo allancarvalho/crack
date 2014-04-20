@@ -1,15 +1,14 @@
 'use strict';
 var rest = require('rest');
 var NodeCache = require( "node-cache" );
-var myCache = new NodeCache( { stdTTL: 100, checkperiod: 120 } );
+var myCache = new NodeCache( { stdTTL: 0, checkperiod: 0 } );
 var pageMenu = {
 	getLine: function(id, callback, params) {
 		var query = "?pagejson=true&";
 		for(var param in params) {
 			query += param+"="+params[param];
 		}
-
-		var url = 'http://allan.www.americanas.com.br/pageService/home/HomeLinha/menu/'+id+query;
+		var url = 'http://localhost:8080/pageService/home/HomeLinha/menu/'+id+query;
 		var json = myCache.get(url);
 		if(Object.keys(json).length === 0){
 			var request = rest(url);
@@ -22,7 +21,7 @@ var pageMenu = {
 		}
 	},
 	getProduct: function(listIds, callback) {
-		var url = 'http://allan.www.americanas.com.br/productinfo/?itens='+listIds+'&full=true';
+		var url = 'http://localhost:8080/productinfo/?itens='+listIds+'&full=true';
 		var json = myCache.get(url);
 		if(Object.keys(json).length === 0){
 			var request = rest(url);
@@ -35,7 +34,7 @@ var pageMenu = {
 		}
 	},
 	getFullProduct: function(idProduct, callback){
-		var url = 'http://allan.www.americanas.com.br/produto/'+idProduct+'/?pagejson=true';
+		var url = 'http://localhost:8080/produto/'+idProduct+'/?pagejson=true';
 		var json = myCache.get(url);
 		if(Object.keys(json).length === 0){
 			var request = rest(url);

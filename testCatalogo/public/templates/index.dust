@@ -1,5 +1,11 @@
-{>"layouts/master" /}
-
-{<body}
-    <h1>{@pre type="content" key="greeting"/}</h1>
-{/body}
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>teste</title>
+</head>
+<body>
+	{header|s}
+	{body}
+</body>
+</html>

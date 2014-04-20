@@ -5,14 +5,9 @@
 		<div class="breadcrumb">
 			<span class="span-bc">
 				{#breadcrumbs}
-				{#selected}
-				<span itemprop="name" class="link selected">{name}</span>
-				{:else}
-				<a itemprop="url" href="{link}" class="link">
+				<a itemprop="url" href="{link}" class="link{#selected} selected{/selected}">
 					<span itemprop="name">{name}</span>
 				</a>
-				{/selected}
-
 				{/breadcrumbs}		
 			</span>
 		</div>
